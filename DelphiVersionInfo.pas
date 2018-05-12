@@ -87,7 +87,7 @@ implementation
 
 const
   cDelphiVersions: array[0..25] of TDelphiVersion = (
-//reWritten from scratch by KodeZwerg
+// reWritten from scratch by KodeZwerg
 
 {   // other Versions that have a ConditionalVersion
     (VersionName: 'Turbo Pascal 4.0'; ConditionalVersion: 'VER40'; ProductVersion: 1; RegKey: ''; RegSubKey: ''; RegVersion: ''),
