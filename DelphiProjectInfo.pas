@@ -14,7 +14,7 @@
 
   The Original Code is Delphi Version Selector.
 
-  The Initial Developer of the Original Code is Sebastian Jänicke.
+  The Initial Developer of the Original Code is Sebastian JÃ¤nicke.
   Portions created by the Initial Developer are Copyright (C) 2013
   the Initial Developer. All Rights Reserved.
 
@@ -88,6 +88,7 @@ begin
 end;
 
 function TDelphiProject.GetProductVersionFromDProj(const AFilename: string): TArray<Integer>;
+// reWritten from scratch by KodeZwerg
 var
   ProjectFileXml: IXMLDocument;
   VersionValue: string;
@@ -100,16 +101,34 @@ begin
   begin
     VersionValue := VersionNode.NodeValue;
     ProjectVersion := StrToFloatDef(StringReplace(VersionValue, '.', FormatSettings.DecimalSeparator, []), 0);
-    if ProjectVersion <= 12.1 then
-      Result := TArray<Integer>.Create(12, 14)
-    else if ProjectVersion < 13 then
+    if ProjectVersion < 11 then
+      Result := TArray<Integer>.Create(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    else if ((ProjectVersion >= 11.0) and (ProjectVersion < 12.2)) then
+      Result := TArray<Integer>.Create(13, 14)
+    else if ProjectVersion <= 12.3 then
       Result := TArray<Integer>.Create(15)
-    else if ProjectVersion < 14 then
+    else if ProjectVersion <= 13.4 then
       Result := TArray<Integer>.Create(16)
-    else if ProjectVersion <= 14.5 then
+    else if ProjectVersion <= 14.3 then
       Result := TArray<Integer>.Create(17)
-    else
-      Result := TArray<Integer>.Create(18);
+    else if ProjectVersion <= 14.6 then
+      Result := TArray<Integer>.Create(18)
+    else if ProjectVersion <= 15.3 then
+      Result := TArray<Integer>.Create(19)
+    else if ProjectVersion <= 15.6 then
+      Result := TArray<Integer>.Create(20, 21)
+    else if ProjectVersion <= 16.1 then
+      Result := TArray<Integer>.Create(22)
+    else if ProjectVersion <= 17.2 then
+      Result := TArray<Integer>.Create(23)
+    else if ProjectVersion <= 18.0 then
+      Result := TArray<Integer>.Create(24)
+    else if ProjectVersion <= 18.1 then
+      Result := TArray<Integer>.Create(24, 25)
+    else if ProjectVersion <= 18.2 then
+      Result := TArray<Integer>.Create(25, 26)
+    else if ProjectVersion >= 18.3 then
+      Result := TArray<Integer>.Create(26)
   end
   else
     Result := TArray<Integer>.Create(11);
