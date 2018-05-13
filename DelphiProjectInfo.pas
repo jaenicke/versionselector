@@ -132,7 +132,7 @@ begin
   end
   else
     Result := TArray<Integer>.Create(11);
- end;
+end;
 
 function TDelphiProject.IsRecommendedVersion(const AVersionNumber: Integer): Boolean;
 var
