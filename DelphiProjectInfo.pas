@@ -1,4 +1,4 @@
-{
+﻿{
   ***** BEGIN LICENSE BLOCK *****
   Version: MPL 1.1/GPL 2.0/LGPL 2.1
 
@@ -15,10 +15,11 @@
   The Original Code is Delphi Version Selector.
 
   The Initial Developer of the Original Code is Sebastian Jänicke.
-  Portions created by the Initial Developer are Copyright (C) 2013
+  Portions created by the Initial Developer are Copyright (C) 2013-2022
   the Initial Developer. All Rights Reserved.
 
   Contributor(s):
+    2018: KodeZwerg - Support up to Delphi 10.2
 
   Alternatively, the contents of this file may be used under the terms of
   either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -111,24 +112,32 @@ begin
       Result := TArray<Integer>.Create(16)
     else if ProjectVersion <= 14.3 then
       Result := TArray<Integer>.Create(17)
+    else if ProjectVersion <= 14.4 then
+      Result := TArray<Integer>.Create(17, 18)
     else if ProjectVersion <= 14.6 then
       Result := TArray<Integer>.Create(18)
     else if ProjectVersion <= 15.3 then
       Result := TArray<Integer>.Create(19)
-    else if ProjectVersion <= 15.6 then
-      Result := TArray<Integer>.Create(20, 21)
+    else if ProjectVersion <= 15.4 then
+      Result := TArray<Integer>.Create(20)
     else if ProjectVersion <= 16.1 then
-      Result := TArray<Integer>.Create(22)
+      Result := TArray<Integer>.Create(21)
     else if ProjectVersion <= 17.2 then
-      Result := TArray<Integer>.Create(23)
+      Result := TArray<Integer>.Create(22)
     else if ProjectVersion <= 18.0 then
-      Result := TArray<Integer>.Create(24)
+      Result := TArray<Integer>.Create(23)
     else if ProjectVersion <= 18.1 then
-      Result := TArray<Integer>.Create(24, 25)
+      Result := TArray<Integer>.Create(23, 24)
     else if ProjectVersion <= 18.2 then
-      Result := TArray<Integer>.Create(25, 26)
-    else if ProjectVersion >= 18.3 then
+      Result := TArray<Integer>.Create(24, 25)
+    else if ProjectVersion >= 18.4 then
+      Result := TArray<Integer>.Create(25)
+    else if ProjectVersion >= 18.8 then
       Result := TArray<Integer>.Create(26)
+    else if ProjectVersion >= 19.2 then
+      Result := TArray<Integer>.Create(27)
+    else if ProjectVersion >= 19.4 then
+      Result := TArray<Integer>.Create(28)
   end
   else
     Result := TArray<Integer>.Create(11);

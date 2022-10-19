@@ -15,10 +15,11 @@
   The Original Code is Delphi Version Selector.
 
   The Initial Developer of the Original Code is Sebastian Jänicke.
-  Portions created by the Initial Developer are Copyright (C) 2013
+  Portions created by the Initial Developer are Copyright (C) 2013-2022
   the Initial Developer. All Rights Reserved.
 
   Contributor(s):
+    2018: KodeZwerg - Support up to Delphi 10.2
 
   Alternatively, the contents of this file may be used under the terms of
   either the GNU General Public License Version 2 or later (the "GPL"), or

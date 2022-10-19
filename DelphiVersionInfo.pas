@@ -1,4 +1,4 @@
-{
+﻿{
   ***** BEGIN LICENSE BLOCK *****
   Version: MPL 1.1/GPL 2.0/LGPL 2.1
 
@@ -15,10 +15,11 @@
   The Original Code is Delphi Version Selector.
 
   The Initial Developer of the Original Code is Sebastian Jänicke.
-  Portions created by the Initial Developer are Copyright (C) 2013
+  Portions created by the Initial Developer are Copyright (C) 2013-2022
   the Initial Developer. All Rights Reserved.
 
   Contributor(s):
+    2018: KodeZwerg - Support up to Delphi 10.2
 
   Alternatively, the contents of this file may be used under the terms of
   either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -86,7 +87,7 @@ type
 implementation
 
 const
-  cDelphiVersions: array[0..25] of TDelphiVersion = (
+  cDelphiVersions: array[0..28] of TDelphiVersion = (
 // reWritten from scratch by KodeZwerg
 
 {   // other Versions that have a ConditionalVersion
@@ -121,12 +122,15 @@ const
     (VersionName: 'Delphi XE4'; ConditionalVersion: 'VER250'; ProductVersion: 18; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '11.0\'),
     (VersionName: 'Delphi XE5'; ConditionalVersion: 'VER260'; ProductVersion: 19; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '12.0\'),
     (VersionName: 'Delphi AppMethod 1.13'; ConditionalVersion: 'VER265'; ProductVersion: 20; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '13.0\'),
-    (VersionName: 'Delphi XE6'; ConditionalVersion: 'VER270'; ProductVersion: 21; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '14.0\'),
-    (VersionName: 'Delphi XE7'; ConditionalVersion: 'VER280'; ProductVersion: 22; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '15.0\'),
-    (VersionName: 'Delphi XE8'; ConditionalVersion: 'VER290'; ProductVersion: 23; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '16.0\'),
-    (VersionName: 'Delphi 10 Seattle'; ConditionalVersion: 'VER300'; ProductVersion: 24; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '17.0\'),
-    (VersionName: 'Delphi 10.1 Berlin'; ConditionalVersion: 'VER310'; ProductVersion: 25; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '18.0\'),
-    (VersionName: 'Delphi 10.2 Tokyo'; ConditionalVersion: 'VER320'; ProductVersion: 26; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '19.0\')
+    (VersionName: 'Delphi XE6'; ConditionalVersion: 'VER270'; ProductVersion: 20; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '14.0\'),
+    (VersionName: 'Delphi XE7'; ConditionalVersion: 'VER280'; ProductVersion: 21; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '15.0\'),
+    (VersionName: 'Delphi XE8'; ConditionalVersion: 'VER290'; ProductVersion: 22; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '16.0\'),
+    (VersionName: 'Delphi 10 Seattle'; ConditionalVersion: 'VER300'; ProductVersion: 23; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '17.0\'),
+    (VersionName: 'Delphi 10.1 Berlin'; ConditionalVersion: 'VER310'; ProductVersion: 24; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '18.0\'),
+    (VersionName: 'Delphi 10.2 Tokyo'; ConditionalVersion: 'VER320'; ProductVersion: 25; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '19.0\'),
+    (VersionName: 'Delphi 10.3 Rio'; ConditionalVersion: 'VER330'; ProductVersion: 26; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '20.0\'),
+    (VersionName: 'Delphi 10.4 Sydney'; ConditionalVersion: 'VER340'; ProductVersion: 27; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '21.0\'),
+    (VersionName: 'Delphi 11 Alexandria'; ConditionalVersion: 'VER350'; ProductVersion: 28; RegKey: 'Software\Embarcadero\'; RegSubKey: 'BDS\'; RegVersion: '22.0\')
   );
 
 { TDelphiVersions }
