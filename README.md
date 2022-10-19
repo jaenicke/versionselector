@@ -6,17 +6,16 @@ This tool can be used to open Delphi project files with the correct version of D
 
 Supported versions of Delphi
 ----------------------------
-I think I used Delphi 2006 to compile the code, but it compiled under 10.2 as it was.
-Delphi 1 to XE6 are supported by the tool to open projects created with these versions.
-
-Todo
-----
-Current versions of Delphi (XE7 and higher) are not supported yet.
+At the moment I use Delphi 10.4 Community Edition to develop this tool.
+Delphi 1 to 11.1 are supported by the tool to open projects created with these versions.
 
 You would like to contribute?
 -----------------------------
 You can send your commits as pull requests. This is the easiest way for you since I'll do
 the merging if neccessary.
+
+Currently there is one contribution:
+  2018: KodeZwerg - Support up to Delphi 10.2
 
 Contact
 -------
